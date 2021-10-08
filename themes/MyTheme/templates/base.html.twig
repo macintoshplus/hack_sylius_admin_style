@@ -1,0 +1,52 @@
+{% extends '@SyliusUi/Layout/sidebar.html.twig' %}
+
+{% block title %} | MyApp{% endblock %}
+
+{% block topbar %}
+    {{ sylius_template_event('sylius.admin.layout.topbar_left') }}
+    <div>left</div>
+    <div class="ui left floated dividing empty item"></div>
+
+    {{ sylius_template_event('sylius.admin.layout.topbar_middle') }}
+
+    <div class="ui right floated dividing empty item"></div>
+    <div>right</div>
+    {{ sylius_template_event('sylius.admin.layout.topbar_right') }}
+{% endblock %}
+
+{% block sidebar %}
+    <a class="item" href="{{ path('home') }}" style="padding: 13px 0;">
+        <div style="max-width: 90px; margin: 0 auto;">
+            <img src="{{ asset('build/images/logo.png') }}" class="ui fluid image">
+        </div>
+    </a>
+    <div class="item">
+        <div class="ui icon inverted transparent input">
+            <input class="sylius-admin-menu-search-input" type="text" placeholder="{{ 'sylius.ui.search'|trans }}">
+            <i class="search icon"></i>
+        </div>
+    </div>
+    <div>
+        {{ knp_menu_render('app.main', {'template': '@SyliusUi/Menu/sidebar.html.twig', 'currentClass': 'active'}) }}
+    </div>
+
+{% endblock %}
+
+{% block footer %}
+    Propulsé par Moi <a href="http://sylius.com" target="_blank">My v0.0.1</a>. un pb? <a
+        href="https://github.com/Sylius/Sylius/issues" target="_blank">dite le!</a>
+{% endblock %}
+
+{% block content %}
+    {% block body %}{% endblock %}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('app') }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+{% endblock %}
+
+
