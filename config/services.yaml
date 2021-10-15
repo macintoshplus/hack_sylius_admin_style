@@ -29,3 +29,7 @@ services:
             $menuFactory: '@knp_menu.factory'
         tags:
             - { name: knp_menu.menu_builder, method: 'generateMenu', alias: 'app.main'}
+
+    Sylius\Component\Grid\Provider\GridProviderInterface: '@sylius.grid.provider'
+
+    Sylius\Component\Grid\View\GridViewFactoryInterface: '@sylius.grid.view_factory'

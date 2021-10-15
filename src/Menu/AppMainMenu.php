@@ -37,7 +37,7 @@ final class AppMainMenu
         $menu = $this->menuFactory->createItem('app.main');
 
         $admin = $menu->addChild('admin')->setLabel('Admin');
-        $admin->addChild('Item1')->setLabel('Item 1')->setLabelAttribute('icon', 'folder')
+        $admin->addChild('Blogpost', ['route'=>'app_blog_post_index'])->setLabel('Blog post')->setLabelAttribute('icon', 'folder')
         ;
         $admin->addChild('Item2')->setLabel('Item 2')->setLabelAttribute('icon', 'folder')
         ;

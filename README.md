@@ -22,3 +22,8 @@ Résultat de la première étape :
 
 Utiliser le Ressource Bundle de Sylius pour gérer des données avec les grilles du SyliusGridBundle.
 
+L'étape c'est arreté après avoir réussi à utiliser le GridBundle sans le ResourceBundle. 
+
+Résultat :
+
+![La liste des blogpost](doc/Fin_etape2.jpeg)

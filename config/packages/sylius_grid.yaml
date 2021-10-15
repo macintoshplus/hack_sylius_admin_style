@@ -1,0 +1,66 @@
+parameters:
+  app.model.blog_post.class: App\Entity\BlogPost
+
+sylius_grid:
+  templates:
+    action:
+      update: "Grid/Action/update.html.twig"
+      delete: "Grid/Action/delete.html.twig"
+      show: "Grid/Action/show.html.twig"
+  grids:
+    app_blog_post: # Your grid name
+      driver:
+        name: doctrine/orm
+        options:
+          class: "%app.model.blog_post.class%"
+          repository:
+            method: createListQueryBuilder
+#      sorting:
+#        name: asc
+      limits: [10, 25, 50, 100]
+      fields:
+        id:
+          type: string
+          label: sylius.ui.id
+        title:
+          type: string
+          label: sylius.ui.name
+
+      actions:
+        main:
+          create:
+            type: create
+            label: sylius.ui.create
+            icon: plus
+            options:
+              link:
+                route: app_blog_post_create
+        item:
+          update:
+            type: update
+            label: sylius.ui.edit
+            icon: edit
+            options:
+              link:
+                route: app_blog_post_update
+                parameters:
+                  id: resource.id
+          delete:
+            type: delete
+            label: sylius.ui.delete
+            icon: trash
+            options:
+              link:
+                route: app_blog_post_delete
+                parameters:
+                  id: resource.id
+          show:
+            type: show
+            label: sylius.ui.show
+            icon: eye
+            options:
+              link:
+                route: app_blog_post_show
+                parameters:
+                  id: resource.id
+        bulk: ~

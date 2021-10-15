@@ -1,0 +1,5 @@
+{% import '@SyliusUi/Macro/buttons.html.twig' as buttons %}
+{% set options = action.options %}
+{% set path = options.link.url|default(path(options.link.route, options.link.parameters|default({'id': data.id}))) %}
+
+{{ buttons.delete(path, action.label, true, data.id) }}
