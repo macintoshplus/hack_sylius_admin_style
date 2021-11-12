@@ -1,9 +1,9 @@
 {
-    "babdev/pagerfanta": {
-        "version": "v2.2.1"
-    },
     "babdev/pagerfanta-bundle": {
         "version": "v3.3.0"
+    },
+    "behat/transliterator": {
+        "version": "v1.3.0"
     },
     "composer/package-versions-deprecated": {
         "version": "1.11.99.4"
@@ -94,11 +94,40 @@
     "friendsofphp/proxy-manager-lts": {
         "version": "v1.0.5"
     },
+    "friendsofsymfony/rest-bundle": {
+        "version": "2.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "2.2",
+            "ref": "fa845143b7e0a4c70aedd1a88c549e6d977e9ae5"
+        },
+        "files": [
+            "config/packages/fos_rest.yaml"
+        ]
+    },
+    "gedmo/doctrine-extensions": {
+        "version": "v3.1.0"
+    },
     "jms/metadata": {
         "version": "2.5.1"
     },
     "jms/serializer": {
         "version": "3.14.0"
+    },
+    "jms/serializer-bundle": {
+        "version": "3.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "3.0",
+            "ref": "384cec52df45f3bfd46a09930d6960a58872b268"
+        },
+        "files": [
+            "config/packages/dev/jms_serializer.yaml",
+            "config/packages/jms_serializer.yaml",
+            "config/packages/prod/jms_serializer.yaml"
+        ]
     },
     "knplabs/knp-menu": {
         "version": "v3.2.0"
@@ -121,11 +150,8 @@
     "nikic/php-parser": {
         "version": "v4.13.0"
     },
-    "pagerfanta/core": {
-        "version": "v3.3.0"
-    },
-    "pagerfanta/twig": {
-        "version": "v3.3.0"
+    "pagerfanta/pagerfanta": {
+        "version": "v2.7.2"
     },
     "phar-io/manifest": {
         "version": "2.0.3"
@@ -284,6 +310,18 @@
     },
     "sylius/registry": {
         "version": "v1.6.0"
+    },
+    "sylius/resource-bundle": {
+        "version": "1.6",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.6",
+            "ref": "bfd4306c8e26b4aed0790ebde89a2c949e1398a2"
+        },
+        "files": [
+            "config/packages/sylius_resource.yaml"
+        ]
     },
     "sylius/theme-bundle": {
         "version": "v2.2.0"
@@ -685,5 +723,32 @@
     },
     "webmozart/assert": {
         "version": "1.10.0"
+    },
+    "willdurand/hateoas": {
+        "version": "3.7.0"
+    },
+    "willdurand/hateoas-bundle": {
+        "version": "2.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "2.0",
+            "ref": "34df072c6edaa61ae19afb2f3a239f272fecab87"
+        },
+        "files": [
+            "config/packages/bazinga_hateoas.yaml"
+        ]
+    },
+    "willdurand/jsonp-callback-validator": {
+        "version": "v1.1.0"
+    },
+    "willdurand/negotiation": {
+        "version": "3.0.0"
+    },
+    "winzou/state-machine": {
+        "version": "0.4.2"
+    },
+    "winzou/state-machine-bundle": {
+        "version": "0.5.1"
     }
 }

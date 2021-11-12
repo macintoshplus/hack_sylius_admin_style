@@ -20,4 +20,9 @@ return [
     Sylius\Bundle\UiBundle\SyliusUiBundle::class => ['all' => true],
     Symfony\WebpackEncoreBundle\WebpackEncoreBundle::class => ['all' => true],
     BabDev\PagerfantaBundle\BabDevPagerfantaBundle::class => ['all' => true],
+    winzou\Bundle\StateMachineBundle\winzouStateMachineBundle::class => ['all' => true],
+    JMS\SerializerBundle\JMSSerializerBundle::class => ['all' => true],
+    Bazinga\Bundle\HateoasBundle\BazingaHateoasBundle::class => ['all' => true],
+    FOS\RestBundle\FOSRestBundle::class => ['all' => true],
+    Sylius\Bundle\ResourceBundle\SyliusResourceBundle::class => ['all' => true],
 ];

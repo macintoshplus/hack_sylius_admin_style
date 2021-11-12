@@ -4,12 +4,13 @@ namespace App\Entity;
 
 use App\Repository\BlogPostRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Sylius\Component\Resource\Model\ResourceInterface;
 
 /**
  * @ORM\Entity(repositoryClass=BlogPostRepository::class)
  * @ORM\HasLifecycleCallbacks()
  */
-class BlogPost
+class BlogPost implements ResourceInterface
 {
     /**
      * @ORM\Id

@@ -2,24 +2,30 @@
 #    path: /
 #    controller: App\Controller\DefaultController::index
 
+app_blog_post:
+  resource: |
+    alias: app.blog_post
+    grid: app_blog_post
+    templates: "/blogpost"
+  type: sylius.resource
 
-app_blog_post_show:
-  path: /blogpost/{id}
-  methods: [GET]
-
-app_blog_post_update:
-  path: /blogpost/{id}/edit
-  methods: [GET, POST]
-
-app_blog_post_delete:
-  path: /blogpost/{id}/delete
-  methods: [GET]
-
-app_blog_post_create:
-  path: /blogpost/new
-  methods: [GET, POST]
-
-app_blog_post_index:
-  path: /blogpost/
-  methods: [GET, POST]
-  controller: App\Controller\BlogPostIndexController
+#app_blog_post_show:
+#  path: /blogpost/{id}
+#  methods: [GET]
+#
+#app_blog_post_update:
+#  path: /blogpost/{id}/edit
+#  methods: [GET, POST]
+#
+#app_blog_post_delete:
+#  path: /blogpost/{id}/delete
+#  methods: [GET]
+#
+#app_blog_post_create:
+#  path: /blogpost/new
+#  methods: [GET, POST]
+#
+#app_blog_post_index:
+#  path: /blogpost/
+#  methods: [GET, POST]
+#  controller: App\Controller\BlogPostIndexController

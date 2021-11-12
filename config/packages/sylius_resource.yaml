@@ -1,0 +1,13 @@
+# @see https://github.com/Sylius/SyliusResourceBundle/blob/master/docs/index.md
+sylius_resource:
+    drivers:
+        - doctrine/orm
+    # Override default settings
+    #settings:
+
+    # Configure your resources
+    resources:
+        app.blog_post:
+            classes:
+                model: App\Entity\BlogPost
+                repository: App\Repository\BlogPostRepository
